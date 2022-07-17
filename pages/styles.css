@@ -1,0 +1,229 @@
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(
+      circle at 3.6751302083333335% 6.940104166666666%,
+      #4d6001 0%,
+      11.55%,
+      rgba(77, 96, 1, 0) 35%
+    ),
+    radial-gradient(
+      circle at 92.96712239583333% 9.554036458333332%,
+      #faaa63 0%,
+      17.5%,
+      rgba(250, 170, 99, 0) 35%
+    ),
+    radial-gradient(
+      circle at 95.20670572916666% 90.48177083333333%,
+      #c9c6ff 0%,
+      34.1%,
+      rgba(201, 198, 255, 0) 55%
+    ),
+    radial-gradient(
+      circle at 4.313151041666666% 93.34635416666667%,
+      #97b49d 0%,
+      29.900000000000002%,
+      rgba(151, 180, 157, 0) 65%
+    ),
+    radial-gradient(
+      circle at 46.555989583333336% 11.50390625%,
+      rgba(214, 222, 72, 0.99) 0%,
+      25%,
+      rgba(214, 222, 72, 0) 50%
+    ),
+    radial-gradient(
+      circle at 51.121419270833336% 89.98697916666667%,
+      #93c3ff 0%,
+      42%,
+      rgba(147, 195, 255, 0) 70%
+    ),
+    radial-gradient(
+      circle at 48.9013671875% 49.521484375%,
+      #000000 0%,
+      100%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  display: flex;
+
+  align-items: center;
+  height: 120px;
+}
+
+.navbar-home {
+  font-weight: 800;
+  color: #404040;
+  font-size: 15px;
+  margin-left: auto;
+
+  margin-right: 20px;
+  transition: 0.2s;
+}
+
+.navbar-collection {
+  font-weight: 800;
+  color: #404040;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-right: 50px;
+  transition: 0.2s;
+}
+
+.navbar-home:hover,
+.navbar-collection:hover {
+  text-decoration: underline;
+}
+
+.navbar-connect {
+  margin-right: 100px;
+
+  padding: 8px 25px;
+  font-size: 13px;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  transition: 0.2s;
+}
+
+.navbar-connect:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
+}
+
+.centerpiece {
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+}
+
+.gif {
+  /* margin-top: 100px; */
+  /* margin-left: 300px;
+  margin-right: 150px; */
+  margin-left: auto;
+  margin-right: 50px;
+  border-radius: 150px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
+}
+
+.glass {
+  /* margin-top: 125px; */
+  margin-left: 50px;
+  margin-right: auto;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
+  border-radius: 30px;
+  height: 250px;
+  width: 400px;
+  text-align: center;
+  padding: 10px;
+}
+
+.nftname {
+  font-family: "Chelsea Market", cursive;
+  letter-spacing: 0.5px;
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.mintbutton {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  transition: 0.2s;
+  padding: 5px 20px;
+  font-size: 15px;
+  margin-top: 8px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  border: none;
+}
+
+.mintbutton:hover {
+  /* background-color: #ffffff;
+  color: black; */
+  cursor: pointer;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
+}
+
+.waitlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.line {
+  height: 2px;
+  width: 500px;
+  background-color: #000000;
+}
+
+.dropheading {
+  font-size: 55px;
+  margin-bottom: 0;
+}
+
+.droptext {
+  text-align: center;
+  width: 400px;
+  margin-bottom: 45px;
+  font-size: 13px;
+}
+
+.addressinput {
+  background-color: transparent;
+  border: none;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 40px;
+  width: 400px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 0px;
+}
+
+.addressinput:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.joinbutton {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  transition: 0.2s;
+  padding: 5px 20px;
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  border: none;
+}
+
+.joinbutton:hover {
+  /* background-color: #ffffff;
+  color: black; */
+  cursor: pointer;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
+}
+
+.footer {
+  background-color: #000000;
+  margin-top: 100px;
+  height: 80px;
+}
