@@ -166,7 +166,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>NFT Website</title>
+        <title>dudeNFT</title>
         <link rel="icon" href="/favicon.ico" />
         <style>
           @import
