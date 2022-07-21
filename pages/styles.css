@@ -182,7 +182,7 @@ body {
   width: 400px;
   text-align: center;
   color: rgba(0, 0, 0, 0.4);
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 .addressinput:focus {
@@ -197,7 +197,7 @@ body {
   transition: 0.2s;
   padding: 5px 20px;
   font-size: 14px;
-  margin-top: 8px;
+  margin-top: 10px;
   font-weight: 400;
   letter-spacing: 2px;
   border: none;
@@ -405,7 +405,7 @@ body {
 .thanks {
   text-align: center;
   color: black;
-  font-size: 15px;
+  font-size: 20px;
   margin: 20px;
   padding-bottom: 30px;
 }
