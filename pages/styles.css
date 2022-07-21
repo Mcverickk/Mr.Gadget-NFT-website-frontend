@@ -315,4 +315,29 @@ body {
 .footer {
   margin-top: 70px;
   height: 50px;
+
+  background-image: radial-gradient(
+      circle at 95.20670572916666% 90.48177083333333%,
+      #c9c6ff 0%,
+      34.1%,
+      rgba(201, 198, 255, 0) 55%
+    ),
+    radial-gradient(
+      circle at 4.313151041666666% 93.34635416666667%,
+      #97b49d 0%,
+      29.900000000000002%,
+      rgba(151, 180, 157, 0) 65%
+    ),
+    radial-gradient(
+      circle at 51.121419270833336% 89.98697916666667%,
+      #93c3ff 0%,
+      42%,
+      rgba(147, 195, 255, 0) 70%
+    ),
+    radial-gradient(
+      circle at 48.9013671875% 49.521484375%,
+      #000000 0%,
+      100%,
+      rgba(0, 0, 0, 0) 100%
+    );
 }

@@ -12,9 +12,23 @@ export default function Home() {
   const [isConnected, setIsConnected] = useState(false);
   const [connectButton, setConnectButton] = useState("Connect Wallet");
   const [signer, setSigner] = useState();
+  const [provider, setProvider] = useState();
   const [tokenPaths, setTokenPaths] = useState([]);
   const [showMessage, setShowMessage] = useState("");
   const [dropAddress, setDropAddress] = useState({ dropAddress: "" });
+
+  const polygonNetwork = {
+    chainId: "0x89",
+    rpcUrls: ["https://rpc-mainnet.matic.network/"],
+    chainName: "Matic Mainnet",
+    nativeCurrency: {
+      name: "MATIC",
+      symbol: "MATIC",
+      decimals: 18,
+    },
+    blockExplorerUrls: ["https://polygonscan.com/"],
+  };
+
   async function Connect() {
     let prov;
     let sign;
@@ -22,6 +36,12 @@ export default function Home() {
       try {
         prov = await new ethers.providers.Web3Provider(window.ethereum);
         const accounts = await prov.send("eth_requestAccounts", []);
+        await prov.send(
+          "wallet_switchEthereumChain",
+          [{ chainId: "0x4" }] // chainId must be in hexadecimal numbers
+        );
+
+        //await prov.send("wallet_addEthereumChain", [polygonNetwork]);
 
         const account =
           accounts[0].slice(0, 6) + "...." + accounts[0].slice(38);
@@ -31,6 +51,7 @@ export default function Home() {
         setProviderContract(new ethers.Contract(address, abi, prov));
         setSignerContract(new ethers.Contract(address, abi, sign));
         setSigner(sign);
+        setProvider(prov);
       } catch (e) {
         console.log(e);
       }
@@ -47,13 +68,17 @@ export default function Home() {
   const Mint = async () => {
     if (isConnected) {
       try {
+        await provider.send(
+          "wallet_switchEthereumChain",
+          [{ chainId: "0x4" }] // chainId must be in hexadecimal numbers
+        );
         const id = await signerContract.totalSupply();
         await signerContract.mintNFTs(1);
 
         document.getElementById(
           "mintmessage"
         ).innerHTML = `NFT number ${id} minted!`;
-        alert("Click on Show in the NFT Collection section to view your NFT.");
+        alert("View your NFT in the collection section.");
       } catch (e) {
         console.log(e);
       }
@@ -95,21 +120,25 @@ export default function Home() {
   };
 
   const ShowNFTs = () => {
-    const listTokens = tokenPaths.map((t) => (
-      <li className="nftlistitems">
-        <a href={t} download>
-          <img
-            className="nftimage"
-            src={t}
-            alt="NFT gif image"
-            width="300
-          "
-          />
-        </a>
-      </li>
-    ));
+    try {
+      const listTokens = tokenPaths.map((t) => (
+        <li className="nftlistitems">
+          <a href={t} download>
+            <img
+              className="nftimage"
+              src={t}
+              alt="NFT gif image"
+              width="300
+            "
+            />
+          </a>
+        </li>
+      ));
 
-    return <ul className="nftlist">{listTokens}</ul>;
+      return <ul className="nftlist">{listTokens}</ul>;
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const handleDrop = (e) => {
