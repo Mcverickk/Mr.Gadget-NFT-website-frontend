@@ -148,7 +148,7 @@ export default function Home() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      if (dropAddress.length == 0) {
+      if (dropAddress.dropAddress == "") {
         document.getElementById(
           "dropmessage"
         ).innerHTML = `Enter your wallet address.`;
