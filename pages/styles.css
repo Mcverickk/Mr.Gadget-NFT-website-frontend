@@ -312,32 +312,100 @@ body {
   font-size: 20px;
 }
 
-.footer {
-  margin-top: 70px;
-  height: 50px;
+.aboutcontainer {
+  padding-top: 40px;
 
   background-image: radial-gradient(
       circle at 95.20670572916666% 90.48177083333333%,
-      #c9c6ff 0%,
-      34.1%,
-      rgba(201, 198, 255, 0) 55%
+      #d1cfff 0%,
+      64.1%,
+      rgba(201, 198, 255, 0) 105%
     ),
     radial-gradient(
       circle at 4.313151041666666% 93.34635416666667%,
       #97b49d 0%,
-      29.900000000000002%,
-      rgba(151, 180, 157, 0) 65%
+      69.900000000000002%,
+      rgba(151, 180, 157, 0) 105%
     ),
     radial-gradient(
       circle at 51.121419270833336% 89.98697916666667%,
-      #93c3ff 0%,
-      42%,
+      #94c0f2 100%,
+      72%,
       rgba(147, 195, 255, 0) 70%
-    ),
-    radial-gradient(
-      circle at 48.9013671875% 49.521484375%,
-      #000000 0%,
-      100%,
-      rgba(0, 0, 0, 0) 100%
     );
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  padding-bottom: 100px;
+  padding-top: 60px;
+  padding-left: 80px;
+  padding-right: 80px;
+  height: 200px;
+  color: #000000;
+  text-align: center;
+}
+
+.glass2 {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
+  border-radius: 30px;
+  height: 450px;
+  width: 300px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+
+.chiragnft {
+  width: 300px;
+}
+
+.name {
+  font-size: 27px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.role {
+  padding-top: 10px;
+  margin: 0;
+  font-size: 20;
+  font-weight: 400;
+}
+
+.socials {
+  padding: 18px;
+}
+
+.linkedin {
+  padding: 0px 10px;
+  width: 25px;
+}
+
+.insta {
+  padding: 0px 10px;
+  width: 25px;
+}
+
+.twitter {
+  padding: 0px 10px;
+  width: 25px;
+}
+
+.github {
+  padding: 0px 10px;
+  width: 25px;
+}
+
+.thanks {
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  margin: 20px;
+  padding-bottom: 30px;
 }

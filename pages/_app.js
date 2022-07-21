@@ -78,7 +78,9 @@ export default function Home() {
         document.getElementById(
           "mintmessage"
         ).innerHTML = `NFT number ${id} minted!`;
-        alert("View your NFT in the collection section.");
+        alert(
+          "View your NFT in the collection section. (It may take 10-15s to process the transaction)"
+        );
       } catch (e) {
         console.log(e);
       }
@@ -94,23 +96,28 @@ export default function Home() {
         const userAddress = await signer.getAddress();
         const tokenAmount = await signerContract.balanceOf(userAddress);
         if (tokenAmount == 0) {
-          setShowMessage("Mint an NFT first!");
+          setShowMessage("Looks like you forgot to mint the NFT!");
         } else {
+          if (tokenAmount == 1) {
+            setShowMessage("Rendering NFT...Please wait!");
+          } else {
+            setShowMessage("Rendering NFTs...Please wait!");
+          }
+          for (let i = 0; i < tokenAmount; i++) {
+            const tID = await providerContract.tokenOfOwnerByIndex(
+              userAddress,
+              i
+            );
+
+            t.push(tID);
+          }
+          const images = t.map((token) => {
+            return "nft/" + token + ".png";
+          });
+
+          setTokenPaths(images);
           setShowMessage("Click on the NFT to download the .png file");
         }
-        for (let i = 0; i < tokenAmount; i++) {
-          const tID = await providerContract.tokenOfOwnerByIndex(
-            userAddress,
-            i
-          );
-
-          t.push(tID);
-        }
-        const images = t.map((token) => {
-          return "nft/" + token + ".png";
-        });
-
-        setTokenPaths(images);
       } catch (e) {
         console.log(e);
       }
@@ -164,6 +171,30 @@ export default function Home() {
     } catch (e) {
       console.log(e);
     }
+  };
+
+  const About = (props) => {
+    return (
+      <div className="glass2">
+        <img src={props.image} className="chiragnft" />
+        <h2 className="name">{props.name}</h2>
+        <h3 className="role">{props.role}</h3>
+        <div className="socials">
+          <a href={props.linkedin} target="_blank">
+            <img src="linkedin.png" className="linkedin" />
+          </a>
+          <a href={props.insta} target="_blank">
+            <img src="instagram.png" className="insta" />
+          </a>
+          <a href={props.twitter} target="_blank">
+            <img src="twitter.png" className="twitter" />
+          </a>
+          <a href={props.github} target="_blank">
+            <img src="github.png" className="github" />
+          </a>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -241,8 +272,31 @@ export default function Home() {
         <p className="showmessage">{showMessage}</p>
         <ShowNFTs />
       </div>
-
-      <footer className="footer"></footer>
+      <div className="aboutcontainer">
+        <div className="about">
+          <About
+            image="nft/0.png"
+            name="Chirag Agarwal"
+            role="Techie"
+            linkedin="https://www.linkedin.com/in/chiragagarwal2001/"
+            insta="https://www.instagram.com/chitrachirag_"
+            twitter="https://twitter.com/mcverickk"
+            github="https://github.com/Mcverickk"
+          />
+          <About
+            image="nft/1.png"
+            name="Sutanay Nandi"
+            role="Artist"
+            linkedin="https://www.linkedin.com/in/sutanay-nandi-948b521a6/"
+            insta="https://instagram.com/f.u.b.a.r001?igshid=YmMyMTA2M2Y="
+            twitter=""
+            github=""
+          />
+        </div>
+        <p className="thanks">
+          Special thanks to Tarun for helping with the website design.
+        </p>
+      </div>
     </div>
   );
 }
