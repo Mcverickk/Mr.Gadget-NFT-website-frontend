@@ -145,19 +145,16 @@ export default function Home() {
     setDropAddress({ [e.target.name]: e.target.value });
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      axios
-        .post(
-          "https://sheet.best/api/sheets/af1073e8-fa5c-4a35-ae8c-08d9fd444251",
-          dropAddress
-        )
-        .then((response) => {
-          document.getElementById(
-            "dropmessage"
-          ).innerHTML = `Your NFT is on its way! ETA: 24hrs`;
-        });
+      document.getElementById(
+        "dropmessage"
+      ).innerHTML = `Your NFT is on its way! ETA: 24hrs`;
+      await axios.post(
+        "https://sheet.best/api/sheets/af1073e8-fa5c-4a35-ae8c-08d9fd444251",
+        dropAddress
+      );
     } catch (e) {
       console.log(e);
     }
