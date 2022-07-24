@@ -186,6 +186,7 @@ export default function Home() {
           <a href={props.insta} target="_blank">
             <img src="instagram.png" className="insta" />
           </a>
+
           <a href={props.twitter} target="_blank">
             <img src="twitter.png" className="twitter" />
           </a>
@@ -197,10 +198,28 @@ export default function Home() {
     );
   };
 
+  const AboutSutanay = (props) => {
+    return (
+      <div className="glass2">
+        <img src={props.image} className="chiragnft" />
+        <h2 className="name">{props.name}</h2>
+        <h3 className="role">{props.role}</h3>
+        <div className="socials">
+          <a href={props.linkedin} target="_blank">
+            <img src="linkedin.png" className="linkedin" />
+          </a>
+          <a href={props.insta} target="_blank">
+            <img src="instagram.png" className="insta" />
+          </a>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="container">
       <Head>
-        <title>dudeNFT</title>
+        <title>Mr. Gadget NFT</title>
         <link rel="icon" href="/favicon.ico" />
         <style>
           @import
@@ -224,10 +243,10 @@ export default function Home() {
           "
             />
             <div className="glass">
-              <h1 className="nftname">dudeNFT</h1>
+              <h1 className="nftname">Mr. Gadget</h1>
               <p className="desc">
-                This collection contains 50 unique randomly generated NFTs which
-                can be minted for FREE on Polygon.
+                This collection contains 500 unique randomly generated NFTs
+                which can be minted for FREE on Polygon.
               </p>
               <button className="mintbutton" onClick={Mint}>
                 MINT
@@ -273,6 +292,7 @@ export default function Home() {
         <ShowNFTs />
       </div>
       <div className="aboutcontainer">
+        <h3 className="team">Creators</h3>
         <div className="about">
           <About
             image="nft/0.png"
@@ -283,14 +303,12 @@ export default function Home() {
             twitter="https://twitter.com/mcverickk"
             github="https://github.com/Mcverickk"
           />
-          <About
+          <AboutSutanay
             image="nft/1.png"
             name="Sutanay Nandi"
             role="Artist"
             linkedin="https://www.linkedin.com/in/sutanay-nandi-948b521a6/"
             insta="https://instagram.com/f.u.b.a.r001?igshid=YmMyMTA2M2Y="
-            twitter=""
-            github=""
           />
         </div>
         <p className="thanks">
