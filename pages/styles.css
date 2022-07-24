@@ -66,11 +66,13 @@ body {
   height: 40px;
   width: 150px;
   padding: 8px 20px;
-  font-size: 13px;
+  font-size: 15px;
   background-color: #000000;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 25px;
   transition: 0.2s;
+  justify-content: center;
+  text-align: center;
 }
 
 .navbar-connect:hover {
@@ -166,7 +168,7 @@ body {
 }
 
 .dropheading {
-  font-size: 55px;
+  font-size: 60px;
   margin-bottom: 0;
 }
 
@@ -174,7 +176,7 @@ body {
   text-align: center;
   width: 400px;
   margin-bottom: 45px;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .addressinput {
@@ -183,7 +185,7 @@ body {
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   height: 40px;
-  width: 400px;
+  width: 450px;
   text-align: center;
   color: rgba(0, 0, 0, 0.4);
   margin-bottom: 10px;
@@ -200,7 +202,7 @@ body {
   border-radius: 25px;
   transition: 0.2s;
   padding: 5px 20px;
-  font-size: 14px;
+  font-size: 20px;
   margin-top: 10px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -225,7 +227,7 @@ body {
   background-size: 75%;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 35px;
+  font-size: 40px;
   margin-bottom: 30px;
   background-image: radial-gradient(
       circle at 3.6751302083333335% 6.940104166666666%,
@@ -291,7 +293,7 @@ body {
 
 .collectiontext {
   color: white;
-  font-size: 25px;
+  font-size: 28px;
 }
 
 .nftimage {
