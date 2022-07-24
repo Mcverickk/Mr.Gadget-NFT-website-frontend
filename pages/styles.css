@@ -81,17 +81,20 @@ body {
 .centerpiece {
   display: flex;
   flex-direction: row;
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 .gif {
   /* margin-top: 100px; */
   /* margin-left: 300px;
   margin-right: 150px; */
+  width: 270px;
+  height: 270px;
+  margin-top: 0;
   margin-left: auto;
   margin-right: 50px;
-  border-radius: 150px;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
+  border-radius: 230px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.35);
 }
 
 .glass {
@@ -99,7 +102,7 @@ body {
   margin-left: 50px;
   margin-right: auto;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
-  border-radius: 30px;
+  border-radius: 200px;
   height: 250px;
   width: 400px;
   text-align: center;
@@ -107,11 +110,11 @@ body {
 }
 
 .nftname {
-  font-family: "Chelsea Market", cursive;
+  font-family: "Bitter", serif;
   letter-spacing: 0.5px;
   font-size: 50px;
-  font-weight: 500;
-  margin-top: 22px;
+  font-weight: 800;
+  margin-top: 32px;
   margin-bottom: 10px;
 }
 
@@ -120,6 +123,7 @@ body {
   padding-right: 10px;
   font-weight: 400;
   font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .mintbutton {

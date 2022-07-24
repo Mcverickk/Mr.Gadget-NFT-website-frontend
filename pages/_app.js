@@ -225,6 +225,10 @@ export default function Home() {
           @import
           url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Raleway:wght@400;600;800&display=swap');
         </style>
+        <style>
+          @import
+          url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600&display=swap');
+        </style>
       </Head>
       <div className="content">
         <navbar className="navbar">
@@ -237,7 +241,7 @@ export default function Home() {
           <div className="centerpiece">
             <img
               className="gif"
-              src="Gif.gif"
+              src="nft.gif"
               alt="NFT gif image"
               width="300
           "
@@ -245,7 +249,7 @@ export default function Home() {
             <div className="glass">
               <h1 className="nftname">Mr. Gadget</h1>
               <p className="desc">
-                This collection contains 500 unique randomly generated NFTs
+                This collection contains 245 unique randomly generated NFTs
                 which can be minted for FREE on Polygon.
               </p>
               <button className="mintbutton" onClick={Mint}>
@@ -295,7 +299,7 @@ export default function Home() {
         <h3 className="team">Creators</h3>
         <div className="about">
           <About
-            image="nft/0.png"
+            image="nft/2.png"
             name="Chirag Agarwal"
             role="Techie"
             linkedin="https://www.linkedin.com/in/chiragagarwal2001/"
@@ -304,7 +308,7 @@ export default function Home() {
             github="https://github.com/Mcverickk"
           />
           <AboutSutanay
-            image="nft/1.png"
+            image="nft/40.png"
             name="Sutanay Nandi"
             role="Artist"
             linkedin="https://www.linkedin.com/in/sutanay-nandi-948b521a6/"
