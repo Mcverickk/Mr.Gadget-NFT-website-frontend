@@ -18,28 +18,31 @@ export default function Home() {
   const [dropAddress, setDropAddress] = useState({ dropAddress: "" });
   const [accountAddress, setAccountAddress] = useState();
 
-  const polygonNetwork = {
-    chainId: "0x89",
-    rpcUrls: ["https://rpc-mainnet.matic.network/"],
-    chainName: "Matic Mainnet",
-    nativeCurrency: {
-      name: "MATIC",
-      symbol: "MATIC",
-      decimals: 18,
-    },
-    blockExplorerUrls: ["https://polygonscan.com/"],
-  };
-
   async function Connect() {
     let prov;
     let sign;
     if (typeof window.ethereum !== "undefined") {
       try {
-        prov = await new ethers.providers.Web3Provider(window.ethereum);
-        await prov.send(
-          "wallet_switchEthereumChain",
-          [{ chainId: "0x89" }] // chainId must be in hexadecimal numbers
-        );
+        await window.ethereum.request({
+          method: "wallet_addEthereumChain",
+          params: [
+            {
+              chainId: "0x89",
+              rpcUrls: ["https://rpc-mainnet.matic.network/"],
+              chainName: "Matic Mainnet",
+              nativeCurrency: {
+                name: "MATIC",
+                symbol: "MATIC",
+                decimals: 18,
+              },
+              blockExplorerUrls: ["https://polygonscan.com/"],
+            },
+          ],
+        });
+        // await prov.send(
+        //   "wallet_switchEthereumChain",
+        //   [{ chainId: "0x89" }] // chainId must be in hexadecimal numbers
+        // );
         prov = await new ethers.providers.Web3Provider(window.ethereum);
         const accounts = await prov.send("eth_requestAccounts", []);
         setAccountAddress(accounts[0]);
@@ -136,7 +139,7 @@ export default function Home() {
             <img
               className="nftimage"
               src={t}
-              alt="NFT gif image"
+              alt="NFT image"
               width="300
             "
             />
