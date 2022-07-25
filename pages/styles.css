@@ -110,11 +110,15 @@ body {
 }
 
 .nftname {
-  font-family: "Bitter", serif;
+  /* font-family: "Bitter", serif; */
+  /* font-family: "Bungee", cursive; */
+  /* font-family: "Montserrat Alternates", sans-serif; */
+  font-family: "Orbitron", sans-serif;
+  /* font-family: "Teko", sans-serif; */
   letter-spacing: 0.033vw;
   font-size: 4.67vw;
   font-weight: 800;
-  margin-top: 2.2vw;
+  margin-top: 2.4vw;
   margin-bottom: 0.67vw;
 }
 
