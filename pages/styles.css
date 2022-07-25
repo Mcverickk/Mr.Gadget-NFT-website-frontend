@@ -62,19 +62,15 @@ body {
 }
 
 .navbar-connect {
-  margin-right: 6vw;
-  margin-left: auto;
-  height: 2.55vw;
-  width: 10vw;
-  padding: 0.53vw 1.33vw;
-  font-size: 0.95vw;
   background-color: #000000;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 1.66vw;
   transition: 0.2s;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  padding: 0.6vw 1.4vw;
+  font-size: 1.3vw;
+  margin-right: 6vw;
+  margin-left: auto;
+  border: none;
 }
 
 .navbar-connect:hover {
