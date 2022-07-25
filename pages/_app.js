@@ -40,6 +40,7 @@ export default function Home() {
           "wallet_switchEthereumChain",
           [{ chainId: "0x89" }] // chainId must be in hexadecimal numbers
         );
+        prov = await new ethers.providers.Web3Provider(window.ethereum);
         const accounts = await prov.send("eth_requestAccounts", []);
         setAccountAddress(accounts[0]);
 
@@ -77,14 +78,20 @@ export default function Home() {
             [{ chainId: "0x89" }] // chainId must be in hexadecimal numbers
           );
           const id = await signerContract.totalSupply();
-          await signerContract.mintNFTs();
+          if (id < 241) {
+            await signerContract.mintNFTs();
 
-          document.getElementById(
-            "mintmessage"
-          ).innerHTML = `NFT number ${id} minted!`;
-          alert(
-            "View your NFT in the collection section. (It may take 10-15s to process the transaction)"
-          );
+            document.getElementById(
+              "mintmessage"
+            ).innerHTML = `NFT number ${id} minted!`;
+            alert(
+              "View your NFT in the collection section. (It may take 10-20s to process the transaction)"
+            );
+          } else {
+            document.getElementById(
+              "mintmessage"
+            ).innerHTML = `All NFTs have been minted! `;
+          }
         } else {
           document.getElementById(
             "mintmessage"
@@ -103,12 +110,16 @@ export default function Home() {
       try {
         let t = [];
         t = await signerContract.tokensOfOwner(accountAddress);
-        const images = t.map((token) => {
-          return "nft/" + token + ".png";
-        });
-
-        setTokenPaths(images);
-        setShowMessage("Click on the NFT to download the .png file");
+        if (t.length == 0) {
+          setShowMessage("Oops! You forgot to mint the NFT!");
+        } else {
+          setShowMessage("Rendering images...");
+          const images = t.map((token) => {
+            return "nft/" + token + ".png";
+          });
+          setTokenPaths(images);
+          setShowMessage("Click on the NFT to download the .png file");
+        }
       } catch (e) {
         console.log(e);
       }
