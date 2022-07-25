@@ -8,7 +8,7 @@ body {
 }
 
 .content {
-  padding-bottom: 50px;
+  padding-bottom: 3.33vw;
   background-image: radial-gradient(
       circle at 3.6751302083333335% 6.940104166666666%,
       #4d6001 0%,
@@ -57,19 +57,19 @@ body {
   display: flex;
 
   align-items: center;
-  height: 120px;
+  height: 8vw;
 }
 
 .navbar-connect {
-  margin-right: 100px;
+  margin-right: 6vw;
   margin-left: auto;
-  height: 40px;
-  width: 150px;
-  padding: 8px 20px;
-  font-size: 15px;
+  height: 2.55vw;
+  width: 10vw;
+  padding: 0.53vw 1.33vw;
+  font-size: 0.95vw;
   background-color: #000000;
   color: rgba(255, 255, 255, 0.8);
-  border-radius: 25px;
+  border-radius: 1.66vw;
   transition: 0.2s;
   justify-content: center;
   text-align: center;
@@ -83,61 +83,61 @@ body {
 .centerpiece {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: 2vw;
 }
 
 .gif {
   /* margin-top: 100px; */
   /* margin-left: 300px;
   margin-right: 150px; */
-  width: 400px;
-  height: 400px;
-  margin-top: 14;
+  width: 26.6vw;
+  height: 26.6vw;
+  margin-top: 0.93vw;
   margin-left: auto;
-  margin-right: 50px;
-  border-radius: 230px;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.35);
+  margin-right: 3.33vw;
+  border-radius: 15vw;
+  box-shadow: 0px 0px 2.66vw rgba(0, 0, 0, 0.35);
 }
 
 .glass {
-  margin-top: 25px;
-  margin-left: 50px;
+  margin-top: 1.66vw;
+  margin-left: 3.3vw;
   margin-right: auto;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
-  border-radius: 180px;
-  height: 300px;
-  width: 500px;
+  box-shadow: 0px 0px 2.66vw rgba(0, 0, 0, 0.45);
+  border-radius: 12vw;
+  height: 20vw;
+  width: 32vw;
   text-align: center;
-  padding: 26px;
+  padding: 1.73vw;
 }
 
 .nftname {
   font-family: "Bitter", serif;
-  letter-spacing: 0.5px;
-  font-size: 70px;
+  letter-spacing: 0.033vw;
+  font-size: 4.67vw;
   font-weight: 800;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  margin-top: 2.2vw;
+  margin-bottom: 0.67vw;
 }
 
 .desc {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1.33vw;
+  padding-right: 1.33vw;
   font-weight: 400;
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 1.2vw;
+  margin-bottom: 0.66vw;
 }
 
 .mintbutton {
   background-color: #000000;
   color: rgba(255, 255, 255, 0.8);
-  border-radius: 25px;
+  border-radius: 1.66vw;
   transition: 0.2s;
-  padding: 5px 20px;
-  font-size: 20px;
-  margin-top: 28px;
+  padding: 0.33vw 1.33vw;
+  font-size: 1.33vw;
+  margin-top: 1.86vw;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 0.13vw;
   border: none;
 }
 
@@ -145,7 +145,7 @@ body {
   /* background-color: #ffffff;
   color: black; */
   cursor: pointer;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 2.66vw rgba(0, 0, 0, 0.45);
 }
 
 .waitlist {
@@ -153,7 +153,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 170px;
+  margin-top: 11.33vw;
 }
 
 .dropform {
@@ -162,33 +162,39 @@ body {
 }
 
 .line {
-  height: 2px;
-  width: 500px;
+  height: 0.13vw;
+  width: 33.33vw;
   background-color: #000000;
 }
 
 .dropheading {
-  font-size: 60px;
+  font-size: 4vw;
   margin-bottom: 0;
 }
 
 .droptext {
   text-align: center;
-  width: 400px;
-  margin-bottom: 45px;
-  font-size: 15px;
+  width: 26.66vw;
+  margin-bottom: 3vw;
+  font-size: 1vw;
 }
 
 .addressinput {
   background-color: transparent;
   border: none;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  height: 40px;
-  width: 450px;
+  box-shadow: 0px 0px 2.66vw rgba(0, 0, 0, 0.2);
+  border-radius: 0.66vw;
+  height: 2.66vw;
+  width: 30vw;
   text-align: center;
   color: rgba(0, 0, 0, 0.4);
-  margin-bottom: 10px;
+  margin-bottom: 0.66vw;
+}
+
+.addressinput::placeholder {
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
 }
 
 .addressinput:focus {
@@ -199,13 +205,13 @@ body {
 .joinbutton {
   background-color: #000000;
   color: rgba(255, 255, 255, 0.8);
-  border-radius: 25px;
+  border-radius: 1.66vw;
   transition: 0.2s;
-  padding: 5px 20px;
-  font-size: 20px;
-  margin-top: 10px;
+  padding: 0.33vw 1.3vw;
+  font-size: 1.3vw;
+  margin-top: 0.66vw;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 0.13vw;
   border: none;
 }
 
@@ -213,11 +219,11 @@ body {
   /* background-color: #ffffff;
   color: black; */
   cursor: pointer;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 0px 2.66vw rgba(0, 0, 0, 0.45);
 }
 
 .collection {
-  margin-top: 50px;
+  margin-top: 3.33vw;
   background-color: black;
   text-align: center;
   align-items: center;
@@ -227,8 +233,8 @@ body {
   background-size: 75%;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 40px;
-  margin-bottom: 30px;
+  font-size: 2.66vw;
+  margin-bottom: 2vw;
   background-image: radial-gradient(
       circle at 3.6751302083333335% 6.940104166666666%,
       #4d6001 0%,
@@ -276,13 +282,13 @@ body {
 .viewnft {
   background-color: tran;
   color: black;
-  border-radius: 25px;
+  border-radius: 1.66vw;
   transition: 0.2s;
-  padding: 5px 20px;
-  font-size: 16px;
-  margin-bottom: 10px;
+  padding: 0.33vw 1.3vw;
+  font-size: 1.3vw;
+  margin-bottom: 0.66vw;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 0.13vw;
   border: none;
 }
 .viewnft:hover {
@@ -293,18 +299,18 @@ body {
 
 .collectiontext {
   color: white;
-  font-size: 28px;
+  font-size: 1.86vw;
 }
 
 .nftimage {
-  margin: 20px 50px;
+  margin: 1.33vw 3.33vw;
 }
 .nftlist {
   display: flex;
   flex-direction: row;
   margin-left: -2.3em;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 2.66vw;
   flex-wrap: wrap;
 }
 .nftlistitems {
@@ -315,11 +321,11 @@ body {
 
 .showmessage {
   color: white;
-  font-size: 20px;
+  font-size: 1.33vw;
 }
 
 .aboutcontainer {
-  padding-top: 40px;
+  padding-top: 2.66vw;
 
   background-image: radial-gradient(
       circle at 95.20670572916666% 90.48177083333333%,
@@ -345,81 +351,82 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 80px;
-  padding-bottom: 100px;
-  padding-top: 60px;
-  padding-left: 80px;
-  padding-right: 80px;
-  height: 200px;
+  margin-top: 6.66vw;
+  margin-bottom: 5.33vw;
+  padding-bottom: 6.66vw;
+  padding-top: 4vw;
+  padding-left: 5.33vw;
+  padding-right: 5.33vw;
+  height: 13.33vw;
   color: #000000;
   text-align: center;
 }
 
 .glass2 {
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.45);
-  border-radius: 30px;
-  height: 450px;
-  width: 300px;
+  box-shadow: 0px 0px 2.6vw rgba(0, 0, 0, 0.45);
+  border-radius: 2vw;
+  height: 29.5vw;
+  width: 19.5vw;
   text-align: center;
   align-items: center;
   justify-content: center;
-  margin: 100px;
+  margin: 6.66vw;
 }
 
 .team {
-  font-size: 35px;
+  font-size: 2.33vw;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 120px;
-  margin-top: 20px;
+  margin-bottom: 8vw;
+  margin-top: 1.33vw;
 }
 
 .chiragnft {
-  width: 300px;
+  width: 19.5vw;
 }
 
 .name {
-  font-size: 27px;
+  font-size: 1.75vw;
   font-weight: 500;
   margin-bottom: 0;
 }
 
 .role {
-  padding-top: 10px;
+  padding-top: 0.66vw;
+  padding-bottom: 0;
   margin: 0;
-  font-size: 20;
+  font-size: 1.33vw;
   font-weight: 400;
 }
 
 .socials {
-  padding: 18px;
+  padding-top: 1vw;
 }
 
 .linkedin {
-  padding: 0px 10px;
-  width: 25px;
+  padding: 0px 0.66vw;
+  width: 1.66vw;
 }
 
 .insta {
-  padding: 0px 10px;
-  width: 25px;
+  padding: 0px 0.66vw;
+  width: 1.66vw;
 }
 
 .twitter {
-  padding: 0px 10px;
-  width: 25px;
+  padding: 0px 0.66vw;
+  width: 1.66vw;
 }
 
 .github {
-  padding: 0px 10px;
-  width: 25px;
+  padding: 0px 0.66vw;
+  width: 1.66vw;
 }
 
 .thanks {
   text-align: center;
   color: black;
-  font-size: 20px;
-  margin: 20px;
-  padding-bottom: 30px;
+  font-size: 1.33vw;
+  margin: 1.33vw;
+  padding-bottom: 2vw;
 }
