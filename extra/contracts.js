@@ -1,4 +1,4 @@
-const address = "0xeDaA50023032b5C11E6921b9fD9b4222296eDd03";
+const address = "0x9E0199F5FE4D0a1e6cD8a2b50718BC3DcCcEB058";
 const abi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {
@@ -146,7 +146,7 @@ const abi = [
     inputs: [],
     name: "mintNFTs",
     outputs: [],
-    stateMutability: "payable",
+    stateMutability: "nonpayable",
     type: "function",
   },
   {

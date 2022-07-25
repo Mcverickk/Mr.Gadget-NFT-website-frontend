@@ -74,7 +74,7 @@ export default function Home() {
         if (tokenAmount < 3) {
           await provider.send(
             "wallet_switchEthereumChain",
-            [{ chainId: "0x4" }] // chainId must be in hexadecimal numbers
+            [{ chainId: "0x89" }] // chainId must be in hexadecimal numbers
           );
           const id = await signerContract.totalSupply();
           await signerContract.mintNFTs();
