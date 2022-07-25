@@ -55,7 +55,8 @@ body {
 
 .navbar {
   display: flex;
-
+  justify-content: center;
+  text-align: center;
   align-items: center;
   height: 8vw;
 }
@@ -73,6 +74,7 @@ body {
   transition: 0.2s;
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 .navbar-connect:hover {
@@ -148,6 +150,10 @@ body {
   box-shadow: 0px 0px 2.66vw rgba(0, 0, 0, 0.45);
 }
 
+.mintmessage {
+  margin-top: 0.8vw;
+  font-size: 1.1vw;
+}
 .waitlist {
   display: flex;
   flex-direction: column;
@@ -177,6 +183,10 @@ body {
   width: 26.66vw;
   margin-bottom: 3vw;
   font-size: 1vw;
+}
+.message {
+  margin-top: 0.9vw;
+  font-size: 1.1vw;
 }
 
 .addressinput {
@@ -299,7 +309,7 @@ body {
 
 .collectiontext {
   color: white;
-  font-size: 1.86vw;
+  font-size: 1.8vw;
 }
 
 .nftimage {
@@ -321,9 +331,8 @@ body {
 
 .showmessage {
   color: white;
-  font-size: 1.33vw;
+  font-size: 1.15vw;
 }
-
 .aboutcontainer {
   padding-top: 2.66vw;
 
@@ -429,4 +438,231 @@ body {
   font-size: 1.33vw;
   margin: 1.33vw;
   padding-bottom: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    padding: 5vw 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 8vw;
+  }
+
+  .navbar-connect {
+    margin: auto;
+    height: 5vw;
+    width: 20vw;
+    padding: 1vw 2.6vw;
+    font-size: 1.9vw;
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 3.3vw;
+    transition: 0.2s;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .centerpiece {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2vw;
+    /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+  .gif {
+    width: 50vw;
+    height: 50vw;
+    margin: 3vw auto;
+    border-radius: 25vw;
+  }
+
+  .glass {
+    margin: 5.5vw auto;
+    border-radius: 22vw;
+    height: 40vw;
+    width: 62vw;
+    text-align: center;
+    padding: 1.73vw;
+  }
+
+  .nftname {
+    font-size: 8.67vw;
+    font-weight: 800;
+    margin-top: 6vw;
+    margin-bottom: 1.3vw;
+  }
+
+  .desc {
+    padding-left: 2.6vw;
+    padding-right: 2.6vw;
+    font-size: 2.3vw;
+    margin-bottom: 1.3vw;
+  }
+
+  .mintbutton {
+    border-radius: 3.2vw;
+    padding: 0.7vw 2.66vw;
+    font-size: 2.6vw;
+    margin-top: 2vw;
+    letter-spacing: 0.23vw;
+  }
+
+  .mintmessage {
+    margin-top: 1.9vw;
+    font-size: 2.2vw;
+  }
+
+  .waitlist {
+    margin-top: 9vw;
+  }
+
+  .line {
+    height: 0.26vw;
+    width: 67vw;
+  }
+
+  .dropheading {
+    font-size: 8vw;
+  }
+
+  .droptext {
+    width: 53vw;
+    margin-bottom: 5vw;
+    font-size: 1.92vw;
+  }
+  .message {
+    margin-top: 1.8vw;
+    font-size: 2.2vw;
+  }
+
+  .addressinput {
+    border-radius: 1.3vw;
+    height: 5vw;
+    width: 60vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .addressinput::placeholder {
+    font-size: 2vw;
+  }
+
+  .joinbutton {
+    border-radius: 3.3vw;
+    padding: 0.66vw 2.6vw;
+    font-size: 2.6vw;
+    margin-top: 1.7vw;
+    margin-bottom: 2vw;
+    letter-spacing: 0.26vw;
+  }
+
+  .collection {
+    margin-top: 6.66vw;
+  }
+
+  .gradienttext {
+    background-size: 75%;
+    font-size: 5.2vw;
+    margin-bottom: 4vw;
+  }
+
+  .viewnft {
+    border-radius: 3.2vw;
+
+    padding: 0.66vw 2.6vw;
+    font-size: 2.6vw;
+    margin-bottom: 1.3vw;
+
+    letter-spacing: 0.26vw;
+  }
+
+  .collectiontext {
+    font-size: 3.6vw;
+  }
+
+  .nftimage {
+    margin: 2.66vw 6.66vw;
+  }
+  .nftlist {
+    margin-left: -4.6em;
+    margin-top: 5.2vw;
+  }
+
+  .showmessage {
+    font-size: 2.3vw;
+  }
+
+  .aboutcontainer {
+    padding-top: 5.2vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about {
+    margin-top: 48vw;
+    margin-bottom: 57vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team {
+    font-size: 5vw;
+    margin-bottom: 12vw;
+    margin-top: 2.66vw;
+  }
+
+  .glass2 {
+    border-radius: 4vw;
+    height: 100vw;
+    width: 40vw;
+    margin-top: 7vw;
+  }
+
+  .chiragnft {
+    width: 40vw;
+  }
+
+  .name {
+    font-size: 3.5vw;
+  }
+
+  .role {
+    padding-top: 1.3vw;
+
+    font-size: 2.66vw;
+  }
+
+  .socials {
+    padding: 2vw;
+  }
+
+  .linkedin {
+    padding: 0px 1.3vw;
+    width: 3.2vw;
+  }
+
+  .insta {
+    padding: 0px 1.3vw;
+    width: 3.2vw;
+  }
+
+  .twitter {
+    padding: 0px 1.3vw;
+    width: 3.2vw;
+  }
+
+  .github {
+    padding: 0px 1.3vw;
+    width: 3.2vw;
+  }
+
+  .thanks {
+    font-size: 3.1vw;
+
+    padding-bottom: 10vw;
+  }
 }

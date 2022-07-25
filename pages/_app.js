@@ -238,6 +238,7 @@ export default function Home() {
           @import
           url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600&display=swap');
         </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="content">
         <navbar className="navbar">
@@ -264,7 +265,7 @@ export default function Home() {
               <button className="mintbutton" onClick={Mint}>
                 MINT
               </button>
-              <p id="mintmessage"></p>
+              <p className="mintmessage" id="mintmessage"></p>
             </div>
           </div>
 
