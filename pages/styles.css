@@ -442,7 +442,7 @@ body {
 
 @media screen and (max-width: 800px) {
   .navbar {
-    padding: 5vw 0;
+    padding: 6vw 0;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -452,72 +452,66 @@ body {
 
   .navbar-connect {
     margin: auto;
-    height: 5vw;
-    width: 20vw;
-    padding: 1vw 2.6vw;
-    font-size: 1.9vw;
-    background-color: #000000;
-    color: rgba(255, 255, 255, 0.8);
-    border-radius: 3.3vw;
-    transition: 0.2s;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    height: 10vw;
+    width: 40vw;
+    padding: 2vw 5vw;
+    font-size: 3.8vw;
+    border-radius: 6vw;
   }
 
   .centerpiece {
     display: flex;
     flex-direction: column;
 
-    margin-top: 2vw;
+    margin-top: 4 vw;
     /* The width is 100%, when the viewport is 800px or smaller */
   }
 
   .gif {
-    width: 50vw;
-    height: 50vw;
-    margin: 3vw auto;
-    border-radius: 25vw;
+    width: 75vw;
+    height: 75vw;
+    margin: 5vw auto;
+    border-radius: 40vw;
   }
 
   .glass {
     margin: 5.5vw auto;
-    border-radius: 22vw;
-    height: 40vw;
-    width: 62vw;
+    border-radius: 15vw;
+    height: 60vw;
+    width: 80vw;
     text-align: center;
-    padding: 1.73vw;
+    padding: 3vw;
   }
 
   .nftname {
-    font-size: 8.67vw;
+    font-size: 12vw;
     font-weight: 800;
-    margin-top: 6vw;
-    margin-bottom: 1.3vw;
+    margin-top: 8vw;
+    margin-bottom: 1.5vw;
   }
 
   .desc {
-    padding-left: 2.6vw;
-    padding-right: 2.6vw;
-    font-size: 2.3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    font-size: 3.5vw;
     margin-bottom: 1.3vw;
   }
 
   .mintbutton {
-    border-radius: 3.2vw;
-    padding: 0.7vw 2.66vw;
-    font-size: 2.6vw;
-    margin-top: 2vw;
-    letter-spacing: 0.23vw;
+    border-radius: 6vw;
+    padding: 1.4vw 5vw;
+    font-size: 5vw;
+    margin-top: 4vw;
+    letter-spacing: 0.4vw;
   }
 
   .mintmessage {
-    margin-top: 1.9vw;
-    font-size: 2.2vw;
+    margin-top: 2.2vw;
+    font-size: 3vw;
   }
 
   .waitlist {
-    margin-top: 9vw;
+    margin-top: 12vw;
   }
 
   .line {
@@ -526,57 +520,57 @@ body {
   }
 
   .dropheading {
-    font-size: 8vw;
+    font-size: 9vw;
   }
 
   .droptext {
-    width: 53vw;
+    width: 80vw;
     margin-bottom: 5vw;
-    font-size: 1.92vw;
+    font-size: 3.5vw;
   }
   .message {
     margin-top: 1.8vw;
-    font-size: 2.2vw;
+    font-size: 3vw;
   }
 
   .addressinput {
     border-radius: 1.3vw;
-    height: 5vw;
-    width: 60vw;
+    height: 8vw;
+    width: 80vw;
     margin-bottom: 1.5vw;
   }
 
   .addressinput::placeholder {
-    font-size: 2vw;
+    font-size: 3.3vw;
   }
 
   .joinbutton {
-    border-radius: 3.3vw;
-    padding: 0.66vw 2.6vw;
-    font-size: 2.6vw;
-    margin-top: 1.7vw;
-    margin-bottom: 2vw;
-    letter-spacing: 0.26vw;
+    border-radius: 6vw;
+    padding: 1.4vw 5vw;
+    font-size: 5vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    letter-spacing: 0.4vw;
   }
 
   .collection {
-    margin-top: 6.66vw;
+    margin-top: 10vw;
   }
 
   .gradienttext {
-    background-size: 75%;
-    font-size: 5.2vw;
-    margin-bottom: 4vw;
+    background-size: 100%;
+    font-size: 9vw;
+    margin-bottom: 6vw;
   }
 
   .viewnft {
-    border-radius: 3.2vw;
+    border-radius: 6vw;
 
-    padding: 0.66vw 2.6vw;
-    font-size: 2.6vw;
-    margin-bottom: 1.3vw;
+    padding: 1.4vw 5vw;
+    font-size: 5vw;
+    margin-bottom: 2vw;
 
-    letter-spacing: 0.26vw;
+    letter-spacing: 0.4vw;
   }
 
   .collectiontext {
@@ -592,77 +586,75 @@ body {
   }
 
   .showmessage {
-    font-size: 2.3vw;
+    font-size: 3vw;
   }
 
   .aboutcontainer {
-    padding-top: 5.2vw;
+    padding-top: 6vw;
     display: flex;
     flex-direction: column;
   }
 
   .about {
-    margin-top: 48vw;
-    margin-bottom: 57vw;
+    margin-top: 95vw;
+    margin-bottom: 120vw;
     height: 25vw;
     display: flex;
     flex-direction: column;
   }
 
   .team {
-    font-size: 5vw;
-    margin-bottom: 12vw;
-    margin-top: 2.66vw;
+    font-size: 8vw;
+    margin-bottom: 17vw;
+    margin-top: 6vw;
   }
 
   .glass2 {
-    border-radius: 4vw;
-    height: 100vw;
-    width: 40vw;
-    margin-top: 7vw;
+    border-radius: 8vw;
+    height: 150vw;
+    width: 70vw;
+    margin-top: 15vw;
   }
 
   .chiragnft {
-    width: 40vw;
+    width: 70vw;
   }
 
   .name {
-    font-size: 3.5vw;
+    font-size: 6.4vw;
   }
 
   .role {
-    padding-top: 1.3vw;
-
-    font-size: 2.66vw;
+    padding-top: 2.8vw;
+    font-size: 5vw;
   }
 
   .socials {
-    padding: 2vw;
+    padding: 5vw;
   }
 
   .linkedin {
-    padding: 0px 1.3vw;
-    width: 3.2vw;
+    padding: 0px 2.8vw;
+    width: 6.5vw;
   }
 
   .insta {
-    padding: 0px 1.3vw;
-    width: 3.2vw;
+    padding: 0px 2.8vw;
+    width: 6.5vw;
   }
 
   .twitter {
-    padding: 0px 1.3vw;
-    width: 3.2vw;
+    padding: 0px 2.8vw;
+    width: 6.5vw;
   }
 
   .github {
-    padding: 0px 1.3vw;
-    width: 3.2vw;
+    padding: 0px 2.8vw;
+    width: 6.5vw;
   }
 
   .thanks {
-    font-size: 3.1vw;
-
-    padding-bottom: 10vw;
+    font-size: 6vw;
+    padding-bottom: 20vw;
   }
 }
