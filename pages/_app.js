@@ -16,6 +16,7 @@ export default function Home() {
   const [tokenPaths, setTokenPaths] = useState([]);
   const [showMessage, setShowMessage] = useState("");
   const [dropAddress, setDropAddress] = useState({ dropAddress: "" });
+  const [address, setAddress] = useState();
 
   const polygonNetwork = {
     chainId: "0x89",
@@ -36,6 +37,7 @@ export default function Home() {
       try {
         prov = await new ethers.providers.Web3Provider(window.ethereum);
         const accounts = await prov.send("eth_requestAccounts", []);
+        setAddress(accounts[0]);
         await prov.send(
           "wallet_switchEthereumChain",
           [{ chainId: "0x4" }] // chainId must be in hexadecimal numbers
@@ -68,19 +70,26 @@ export default function Home() {
   const Mint = async () => {
     if (isConnected) {
       try {
-        await provider.send(
-          "wallet_switchEthereumChain",
-          [{ chainId: "0x4" }] // chainId must be in hexadecimal numbers
-        );
-        const id = await signerContract.totalSupply();
-        await signerContract.mintNFTs(1);
+        const tokenAmount = await signerContract.balanceOf(address);
+        if (tokenAmount < 2) {
+          await provider.send(
+            "wallet_switchEthereumChain",
+            [{ chainId: "0x4" }] // chainId must be in hexadecimal numbers
+          );
+          const id = await signerContract.totalSupply();
+          await signerContract.mintNFTs(1);
 
-        document.getElementById(
-          "mintmessage"
-        ).innerHTML = `NFT number ${id} minted!`;
-        alert(
-          "View your NFT in the collection section. (It may take 10-15s to process the transaction)"
-        );
+          document.getElementById(
+            "mintmessage"
+          ).innerHTML = `NFT number ${id} minted!`;
+          alert(
+            "View your NFT in the collection section. (It may take 10-15s to process the transaction)"
+          );
+        } else {
+          document.getElementById(
+            "mintmessage"
+          ).innerHTML = `You can't mint more than 2 NFTs.`;
+        }
       } catch (e) {
         console.log(e);
       }
