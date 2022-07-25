@@ -36,12 +36,12 @@ export default function Home() {
     if (typeof window.ethereum !== "undefined") {
       try {
         prov = await new ethers.providers.Web3Provider(window.ethereum);
-        const accounts = await prov.send("eth_requestAccounts", []);
-        setAccountAddress(accounts[0]);
         await prov.send(
           "wallet_switchEthereumChain",
-          [{ chainId: "0x4" }] // chainId must be in hexadecimal numbers
+          [{ chainId: "0x89" }] // chainId must be in hexadecimal numbers
         );
+        const accounts = await prov.send("eth_requestAccounts", []);
+        setAccountAddress(accounts[0]);
 
         //await prov.send("wallet_addEthereumChain", [polygonNetwork]);
 
@@ -211,6 +211,8 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Mr. Gadget NFT</title>
+        {/* <link rel="icon" type="image/x-icon" href="head.png"></link> */}
+
         <link rel="icon" href="/favicon.ico" />
         <style>
           @import
