@@ -169,7 +169,7 @@ export default function Home() {
           "dropmessage"
         ).innerHTML = `Your NFT is on its way! ETA: 24hrs`;
         await axios.post(
-          "https://sheet.best/api/sheets/af1073e8-fa5c-4a35-ae8c-08d9fd444251",
+          "https://sheet.best/api/sheets/83eba305-0bd6-4376-8e0c-b797678f66a3",
           dropAddress
         );
       }
