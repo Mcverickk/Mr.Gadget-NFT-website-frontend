@@ -1,10 +1,6 @@
-const address = "0xe21B74b1f8529199E00734FDCB76Dad802015579";
+const address = "0xeDaA50023032b5C11E6921b9fD9b4222296eDd03";
 const abi = [
-  {
-    inputs: [{ internalType: "string", name: "baseURI", type: "string" }],
-    stateMutability: "nonpayable",
-    type: "constructor",
-  },
+  { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {
     anonymous: false,
     inputs: [
@@ -99,7 +95,7 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "_to", type: "address" }],
+    inputs: [{ internalType: "address[]", name: "_to", type: "address[]" }],
     name: "airdropNFT",
     outputs: [],
     stateMutability: "nonpayable",
@@ -147,7 +143,7 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "_count", type: "uint256" }],
+    inputs: [],
     name: "mintNFTs",
     outputs: [],
     stateMutability: "payable",
@@ -204,7 +200,7 @@ const abi = [
       { internalType: "address", name: "from", type: "address" },
       { internalType: "address", name: "to", type: "address" },
       { internalType: "uint256", name: "tokenId", type: "uint256" },
-      { internalType: "bytes", name: "_data", type: "bytes" },
+      { internalType: "bytes", name: "data", type: "bytes" },
     ],
     name: "safeTransferFrom",
     outputs: [],

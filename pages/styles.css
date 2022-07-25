@@ -133,7 +133,7 @@ body {
   transition: 0.2s;
   padding: 0.33vw 1.33vw;
   font-size: 1.33vw;
-  margin-top: 1.86vw;
+  margin-top: 1.4vw;
   font-weight: 400;
   letter-spacing: 0.13vw;
   border: none;
@@ -147,8 +147,8 @@ body {
 }
 
 .mintmessage {
-  margin-top: 0.8vw;
-  font-size: 1.1vw;
+  margin-top: 1vw;
+  font-size: 1.2vw;
 }
 .waitlist {
   display: flex;
@@ -579,7 +579,7 @@ body {
     margin: 2.66vw 6.66vw;
   }
   .nftlist {
-    margin-left: -4.6em;
+    margin-left: -2.6em;
     margin-top: 5.2vw;
   }
 

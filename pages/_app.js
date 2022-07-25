@@ -16,7 +16,7 @@ export default function Home() {
   const [tokenPaths, setTokenPaths] = useState([]);
   const [showMessage, setShowMessage] = useState("");
   const [dropAddress, setDropAddress] = useState({ dropAddress: "" });
-  const [address, setAddress] = useState();
+  const [accountAddress, setAccountAddress] = useState();
 
   const polygonNetwork = {
     chainId: "0x89",
@@ -37,7 +37,7 @@ export default function Home() {
       try {
         prov = await new ethers.providers.Web3Provider(window.ethereum);
         const accounts = await prov.send("eth_requestAccounts", []);
-        setAddress(accounts[0]);
+        setAccountAddress(accounts[0]);
         await prov.send(
           "wallet_switchEthereumChain",
           [{ chainId: "0x4" }] // chainId must be in hexadecimal numbers
@@ -70,14 +70,14 @@ export default function Home() {
   const Mint = async () => {
     if (isConnected) {
       try {
-        const tokenAmount = await signerContract.balanceOf(address);
-        if (tokenAmount < 2) {
+        const tokenAmount = await signerContract.balanceOf(accountAddress);
+        if (tokenAmount < 3) {
           await provider.send(
             "wallet_switchEthereumChain",
             [{ chainId: "0x4" }] // chainId must be in hexadecimal numbers
           );
           const id = await signerContract.totalSupply();
-          await signerContract.mintNFTs(1);
+          await signerContract.mintNFTs();
 
           document.getElementById(
             "mintmessage"
@@ -88,7 +88,7 @@ export default function Home() {
         } else {
           document.getElementById(
             "mintmessage"
-          ).innerHTML = `You can't mint more than 2 NFTs.`;
+          ).innerHTML = `You can't mint more than 3 NFTs.`;
         }
       } catch (e) {
         console.log(e);
@@ -102,31 +102,13 @@ export default function Home() {
     if (isConnected) {
       try {
         let t = [];
-        const userAddress = await signer.getAddress();
-        const tokenAmount = await signerContract.balanceOf(userAddress);
-        if (tokenAmount == 0) {
-          setShowMessage("Looks like you forgot to mint the NFT!");
-        } else {
-          if (tokenAmount == 1) {
-            setShowMessage("Rendering NFT...Please wait!");
-          } else {
-            setShowMessage("Rendering NFTs...Please wait!");
-          }
-          for (let i = 0; i < tokenAmount; i++) {
-            const tID = await providerContract.tokenOfOwnerByIndex(
-              userAddress,
-              i
-            );
+        t = await signerContract.tokensOfOwner(accountAddress);
+        const images = t.map((token) => {
+          return "nft/" + token + ".png";
+        });
 
-            t.push(tID);
-          }
-          const images = t.map((token) => {
-            return "nft/" + token + ".png";
-          });
-
-          setTokenPaths(images);
-          setShowMessage("Click on the NFT to download the .png file");
-        }
+        setTokenPaths(images);
+        setShowMessage("Click on the NFT to download the .png file");
       } catch (e) {
         console.log(e);
       }
