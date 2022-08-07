@@ -260,8 +260,8 @@ export default function Home() {
                 This collection contains 241 uniquely generated NFTs which can
                 be minted for FREE on Polygon.
               </p>
-              <button className="mintbutton" onClick={Mint}>
-                MINT
+              <button className="mintbutton">
+                SOLD OUT!
               </button>
               <p className="mintmessage" id="mintmessage"></p>
             </div>
