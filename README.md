@@ -1,1 +1,6 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Mr.Gadget NFT Website Frontend
+
+The website is running live at https://mrgadget.netlify.app/
+
+Opeansea Collection - https://opensea.io/collection/mr-gadget
+
